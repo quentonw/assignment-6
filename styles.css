@@ -1,3 +1,29 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+		main {
+		    width: 80%;
+			max-width: 40rem;
+			border: 3px solid blue;
+			padding: 3rem;
+			margin: 0 auto;
+			}
+			h1 {
+				background: #000;
+				color: #fff;
+				padding: 5rem;
+				font-size: 4rem;
+				text-shadow: 5px 4px 5px rgba(0,0,0,0,3);
+				margin-top: 0;
+				background-image: url(whatever).jpg;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			p {
+				font-size: 1.2rem;
+			}
+			p:last-of-type {
+				margin-bottom: 0;
+			}
