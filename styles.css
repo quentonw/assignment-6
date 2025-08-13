@@ -41,3 +41,10 @@ header {
     position: relative; /*set the position property to relative so that it can act as an acnhor for nav in mobile devices*/
 }
 
+ div.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+ }
