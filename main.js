@@ -30,3 +30,11 @@ function toggleMenu() {
 }
 
 btn.addEventListener('click', toggleMenu);
+
+main.mainContent {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
