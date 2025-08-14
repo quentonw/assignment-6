@@ -44,12 +44,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 rem;
-    position: relative; /*set the position property to relative so that it can act as an acnhor for nav in mobile devices*/
+    position: relative;
 }
 
 header.hero-banner {
     color: #fff;
-    background: url(andrew-kliatskyi-2bfHAKhGn4g-unsplash.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
