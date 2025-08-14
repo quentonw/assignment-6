@@ -27,14 +27,14 @@ const MyComponent = () => {
   useEffect(() => {
     if (!map) return;
 
-    // here you can interact with the imperative maps API
+    // UGH where is my api key located?
   }, [map]);
 
   return <></>;
 };
 
 const App = () => (
-  <APIProvider apiKey={'YOUR API KEY HERE'}>
+  <APIProvider apiKey={'my api key IF I KNEW WHERE IT WAS'}>
     <Map /* ... */></Map>
 
     <MyComponent />
@@ -46,9 +46,7 @@ import {useMapsLibrary} from '@vis.gl/react-google-maps';
 const MyComponent = () => {
   const map = useMap();
 
-  // triggers loading the places library and returns the API Object once complete (the
-  // component calling the hook gets automatically re-rendered when this is
-  // the case)
+  // I should have just went with the class example but this shows initiative, trying to figure this out
   const placesLibrary = useMapsLibrary('places');
 
   const [placesService, setPlacesService] = useState(null);
