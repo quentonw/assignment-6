@@ -110,5 +110,7 @@ main.mainContent {
 }
 
 footer {
+	padding: 10px;
+	margin: 10px;
 	text-align: justify;
 }
