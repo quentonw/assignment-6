@@ -1,5 +1,3 @@
-
-
 var navContainer = document.getElelemntById("menu");
 var btn = document.getElementById("toggle");
 function toggleMenu() {
@@ -8,4 +6,6 @@ function toggleMenu() {
 
 btn.addEventListener('click', toggleMenu);
 
+const exploreBtn = document.getElementById('exploreMoreBtn');
+exploreBtn.addEventListener('click', scrollToMain);
 
