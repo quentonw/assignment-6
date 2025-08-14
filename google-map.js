@@ -1,24 +1,19 @@
 GOOGLE_MAPS_API_KEY=<your API key here>
 
-import React from 'react';
-import {createRoot} from 'react-dom/client';
-import {APIProvider, Map} from '@vis.gl/react-google-maps';
+function init() {
+  var mapOptions = {
+    center: new google.maps.LatLng(40.782710,-73.965310),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    zoom: 13
+  };
+  var venueMap;
+  vanueMap = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
 
-const App = () => (
-  <APIProvider apiKey={API_KEY}>
-    <Map
-      style={{width: '100vw', height: '100vh'}}
-      defaultCenter={{lat: 22.54992, lng: 0}}
-      defaultZoom={3}
-      gestureHandling={'greedy'}
-      disableDefaultUI={true}
-    />
-  </APIProvider>
-);
+function loadScript() {
+  var script = document.createElement('script');
+  script.src = 'http:maps.googleapis.com/maps/api/js?
+    sensor=false&callback=init';
+    document.body.appendChild(script);
 
-const root = createRoot(document.querySelector('#app'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+window.onload = loadScript;
