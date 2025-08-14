@@ -108,3 +108,7 @@ main.mainContent {
         display: block;
     }
 }
+
+footer {
+	text-align: justify;
+}
