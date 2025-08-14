@@ -1,4 +1,4 @@
-GOOGLE_MAPS_API_KEY=<your API key here>
+npm install @vis.gl/react-google-maps
 
 function init() {
   var mapOptions = {
