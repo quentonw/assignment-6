@@ -30,12 +30,14 @@ h1 {
 }
 
 p {
-	font-size: 1.2rem;	
+	font-size: 1.2rem;
+	text-align: center;
+	margin-bottom: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
-p:last-of-type {
-	margin-bottom: 0;	
-}
+
 		
 header {
 	background-color: #333;
@@ -68,7 +70,7 @@ header.hero-banner {
  }
 
  button {
-    background-color: #ff4f0f;
+    background-color: #fff;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -89,7 +91,7 @@ main.mainContent {
     button {
         display: block;
     }
-  
+	  
     nav {
        position: absolute;
        top: 100%;
