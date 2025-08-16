@@ -67,9 +67,7 @@ p {
 	display: block;
 }
 
-.dropdown-content a:hover {
-	background-color: #ddd;
-}
+.dropdown-content a:hover {background-color: #ddd;}
 
 .dropbtn:hover, .dropdown-focus {
 	background-color: #2980B9;
@@ -82,9 +80,7 @@ p {
 	display: block;
 }
 
-.show {
-	display: block;
-}
+.show {display: block;}
 
 header {
 	background-color: #333;
