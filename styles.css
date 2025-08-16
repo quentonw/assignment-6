@@ -84,7 +84,7 @@ p {
 
 header {
 	background-color: #333;
-    color: #fff
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
