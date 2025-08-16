@@ -121,6 +121,15 @@ main.mainContent {
     align-items: center;
 }
 
+ button {
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #f0f0f0; 
+}
+
 @media screen and (max-width: 570px) {
     button {
         display: block;
