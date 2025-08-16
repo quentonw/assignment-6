@@ -14,3 +14,5 @@ window.onclick = function(event) {
         }
     }
 }
+
+*/ I gave up trying to find my api key from a site and deleted the thing I was trying to do with it /*
