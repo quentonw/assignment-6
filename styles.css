@@ -113,16 +113,6 @@ header.hero-banner {
     margin: 10px 0;
  }
 
- button {
-    background-color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    color: #ffffff;
-    font-family: "Edu VIC WA NT Hand Pre", cursive; 
-}
-
 main.mainContent {
     height: 600px;
     display: flex;
