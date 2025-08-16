@@ -1,10 +1,16 @@
-var navContainer = document.getElelemntById("menu");
-var btn = document.getElementById("toggle");
-function toggleMenu() {
-    navContainer.classList.toggle('activate');
+function myFunction() {
+    document.getElementById("myDropdown").classlist.toggle("show");
 }
 
-btn.addEventListener('click', toggleMenu);
-
-const exploreBtn = document.getElementById('exploreMoreBtn');
-exploreBtn.addEventListener('click', scrollToMain);
+window.onclick = function(event) {
+    if (!event.target.matches('.drpbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
