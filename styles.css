@@ -85,6 +85,12 @@ header {
     position: relative;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
 header.hero-banner {
     background-color: #f5f7fa;
 	border-bottom: 1px solid #e4ebf3;
