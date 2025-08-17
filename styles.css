@@ -94,7 +94,7 @@ header {
 header.hero-banner {
     background-color: #f5f7fa;
 	border-bottom: 1px solid #e4ebf3;
-    background-position: relative;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
