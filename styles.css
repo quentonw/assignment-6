@@ -22,8 +22,7 @@ h1 {
 	padding: 5rem;
 	font-size: 4rem;
 	text-shadow: 5px 4px 5px rgba(0,0,0,0,3);
-	margin-top: 0;
-	background-image: url(whatever).jpg;
+	margin-bottom: 5px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;	
