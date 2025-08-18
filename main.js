@@ -20,7 +20,3 @@ document.getElementById("demo").addEventListener("click", myFunction);
 function myFunction() {
   document.getElementById("demo").innerHTML = "quenton.whitecalf@edu.sait.ca";
 }
-
-function myFunction(element, color) {
-  element.style.color = color;
-}
