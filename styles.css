@@ -98,7 +98,7 @@ header.hero-banner {
     background-position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 75vh;
  }
 
  div.hero-content {
@@ -152,4 +152,5 @@ footer {
 	grid-column-gap: 25px;
 	display: flex;
 }
+
 /* css has things I originally had in html but it got progressively worse as I tried fixing it and I deleted them */
