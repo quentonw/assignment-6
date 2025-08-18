@@ -15,7 +15,7 @@ window.onclick = function(event) {
     }
 }
 
-document.getElementById("demo").onclick = function() {myFunction()};
+document.getElementById("demo").addEventListener("click", myFunction);
 
 function myFunction() {
   document.getElementById("demo").innerHTML = "quenton.whitecalf@edu.sait.ca";
