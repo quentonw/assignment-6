@@ -15,4 +15,8 @@ window.onclick = function(event) {
     }
 }
 
-*/ I gave up trying to find my api key from a site and deleted the thing I was trying to do with it /*
+document.getElementById("demo").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "quenton.whitecalf@edu.sait.ca";
+}
