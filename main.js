@@ -20,9 +20,3 @@ document.getElementById("demo").addEventListener("click", myFunction);
 function myFunction() {
   document.getElementById("demo").innerHTML = "quenton.whitecalf@edu.sait.ca";
 }
-
-document.getElementById("myBtn").onclick = function() {myFunction()};
-
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
