@@ -95,10 +95,10 @@ header {
 header.hero-banner {
     background-color: #f5f7fa;
 	border-bottom: 1px solid #e4ebf3;
-    background-position: center;
+    background-position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 50vh;
  }
 
  div.hero-content {
