@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>About</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -130,24 +130,24 @@ main.mainContent {
 @media screen and (max-width: 570px) {
     button {
         display: block;
-    }
+}
 	  
-    nav {
-       position: absolute;
-       top: 100%;
-       right: 0;
-       z-index: 100;
-       background-color: #fff;
-       width: 100%;
-    }
+nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+    width: 100%;
+}
   
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+nav ul {
+    flex-direction: column;
+    gap: 10px;
+}
   
-    nav.active {
-        display: block;
+nav.active {
+    display: block;
     }
 }
 
@@ -190,7 +190,30 @@ footer {
     </table>
 </footer>
     <div id="map"></div>
-		<script src="main.js"></script>
+		<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.drpbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+document.getElementById("demo").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "quenton.whitecalf@edu.sait.ca";
+}
+</script>
 	</body>
 </html>
 <!-- Oh my god I had it then I tried getting fancy and it got worse and worse the more I tried differentiating it for this page --!>
