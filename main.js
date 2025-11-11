@@ -1,42 +1,31 @@
-function toggleDropdown() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+// toggle menu
+const btn = document.getElementById('myBtn-alt');
+const menu = document.getElementById('myDropdown-alt');
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-document.getElementById("demo").addEventListener("click", function(){
-  document.getElementById("demo").innerHTML = "quenton.whitecalf@edu.sait.ca";
+btn.addEventListener('click', function (e) {
+  e.stopPropagation();
+  menu.classList.toggle('show');
+  menu.setAttribute('aria-hidden', !menu.classList.contains('show'));
 });
 
-// For the about page
-if (document.getElementById("myBtn-alt")) {
-  document.getElementById("myBtn-alt").addEventListener("click", toggleDropdownAlt);
-}
-
-function toggleDropdownAlt() {
-  document.getElementById("myDropdown-alt").classList.toggle("show-alt");
-}
-
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn-alt')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content-alt");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show-alt')) {
-        openDropdown.classList.remove('show-alt');
-      }
-    }
+// close when clicking outside
+window.addEventListener('click', function (e) {
+  if (!e.target.closest('.dropdown-alt')) {
+    menu.classList.remove('show');
+    menu.setAttribute('aria-hidden', 'true');
   }
-}
+});
+
+// Contact: replace the Contact link with a permanent mailto anchor the first time it's clicked
+const contact = document.getElementById('demo-alt');
+contact.addEventListener('click', function (e) {
+  e.preventDefault();
+  const email = 'quenton.whitecalf@edu.sait.ca';
+  const a = document.createElement('a');
+  a.href = 'mailto:' + email;
+  a.id = 'demo-alt';
+  a.textContent = email;
+  a.style.display = 'block';
+  // replace the original anchor in the menu so it remains clickable
+  this.parentNode.replaceChild(a, this);
+});
