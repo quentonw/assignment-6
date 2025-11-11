@@ -1,219 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Aboutver.0</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<head>
+  <meta charset="utf-8" />
+  <title>Old About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background-image: url('Screenshot_20241023-123735_Gallery.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; }
 
-main {
-  width: 80%;
-  max-width: 40rem;
-  border: 3px solid blue;
-  padding: 3rem;
-  margin: 0 auto;
-}
+    .container { width: 90%; max-width: 800px; margin: 6rem auto 2rem; padding: 2rem; background: rgba(255,255,255,0.85); border-radius: 8px; }
 
-h1 {
-	background: #000;
-	color: #fff;
-	padding: 5rem;
-	font-size: 4rem;
-	text-shadow: 5px 4px 5px rgba(0,0,0,0,3);
-	margin-bottom: 5px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;	
-}
+    h1 { background: #000; color: #fff; padding: 1rem; font-size: 1.75rem; text-align: center; margin-bottom: 1rem; border-radius: 4px; }
 
-p {
-	font-size: 1.2rem;
-	text-align: center;
-	margin-bottom: 40px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-button {
-    position: center;
-    border-radius: 5px;
-}
-
-.dropbtn {
-	background-color: #00AA66;
-	color: white;
-	padding: 14px;
-	font-size: 10px;
-	border: none;
-	cursor: pointer;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  background-color: #2980B9;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color:#010101;
-	min-width: 100px;
-	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
-	padding: 12px 16px;
-	z-index: 1;
-}
-
-.dropdown-content a {
-	color: #33ee41;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.show {display:block;}
-
-header {
-	background-color: #333;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 rem;
-    position: relative;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-
-header.hero-banner {
-    background-color: #f5f7fa;
-	border-bottom: 1px solid #e4ebf3;
-    background-position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 75vh;
- }
-
- div.hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
- }
-
- div-hero-content * {
-    margin: 10px 0;
- }
-
-main.mainContent {
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media screen and (max-width: 570px) {
-    button {
-        display: block;
-}
-	  
-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 100;
-    background-color: #fff;
-    width: 100%;
-}
-  
-nav ul {
-    flex-direction: column;
-    gap: 10px;
-}
-  
-nav.active {
-    display: block;
+    /* fixed top dropdown */
+    .top-controls { position: fixed; top: 12px; right: 12px; z-index: 9999; display: flex; gap: 8px; align-items: center; }
+    .dropdown { position: relative; display: inline-block; }
+    .dropbtn {
+      background-color: #00AA66; color: white; padding: 8px 12px; font-size: 14px; border: none; border-radius: 6px; cursor: pointer;
     }
-}
 
-body {
-  background-image: url('Screenshot_20241023-123735_Gallery.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
+    .dropdown-content {
+      display: none; position: absolute; right: 0; background-color: #010101; min-width: 160px; box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+      padding: 6px 0; z-index: 1010; border-radius: 6px;
+    }
+    .dropdown-content a, .dropdown-content button {
+      color: #33ee41; padding: 8px 16px; text-decoration: none; display: block; background: transparent; border: 0; text-align: left; width: 100%;
+    }
+    .dropdown-content a:hover, .dropdown-content button:hover { background: #222; color: #fff; }
 
-footer {
-	padding: 10px;
-	margin-top: 10px;
-	text-align: justify;
-	grid-column-gap: 25px;
-	display: flex;
-}
+    .dropdown-content.show { display: block; }
 
-/* css has things I originally had in html but it got progressively worse as I tried fixing it and I deleted them */
-	</head>
-	<body>
-        <h1>About us</h1>
-           <div class="dropdown">
-  <button id="myBtn" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="index.html">Home</a>
-	<a href id="demo">Contact</a>
+    img.hero { width: 100%; max-height: 300px; object-fit: cover; border-radius: 6px; margin: 1rem 0; }
+
+    footer { padding: 10px; margin-top: 1rem; text-align: center; display: flex; justify-content: center; background: rgba(255,255,255,0.6); border-radius: 6px; }
+
+    @media (max-width: 570px) {
+      .container { margin-top: 5rem; padding: 1rem; }
+      .dropbtn { padding: 10px; }
+      .dropdown-content { left: 0; right: 0; min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed controls at the top of the page -->
+  <div class="top-controls">
+    <div class="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button id="menuBtn" class="dropbtn" type="button">Menu</button>
+      <div id="myDropdown" class="dropdown-content" role="menu" aria-label="About page menu">
+        <!-- Home goes to oldindex.html -->
+        <a href="oldindex.html" role="menuitem">Home (oldindex.html)</a>
+        <!-- Contact is a button that will be replaced by a mailto: link when clicked -->
+        <button id="contactBtn" type="button" role="menuitem">Contact</button>
+      </div>
+    </div>
   </div>
-</div>
-    </header>
-		<img src="Screenshot_20241023-123735_Gallery.jpg" alt="a cityscape">
-		<footer>    
-    <table>
-    <tr>
-    	<td><span style="color:blue;">2</span></td>
-		<td><span style="color: purple;">0</span></td>
-   		<td><span style="color:red;">2</span></td>
-   		<td><span style="color:green;">5</span></td>
-    </tr>
-    </table>
-</footer>
-    <div id="map"></div>
-		<script>
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
 
-window.onclick = function(event) {
-    if (!event.target.matches('.drpbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
+  <div class="container" role="main">
+    <h1>About us</h1>
+
+    <img class="hero" src="Screenshot_20241023-123735_Gallery.jpg" alt="a cityscape">
+
+    <p style="margin-top:1rem; text-align:center;">
+      This is the original about page</p>
+
+    <div id="map" style="margin-top:1rem; min-height:120px; background:linear-gradient(180deg, #eef, #fff); border-radius:6px;"></div>
+
+    <footer>
+      <table>
+        <tr>
+          <td><span style="color:blue;">2</span></td>
+          <td><span style="color: purple;">0</span></td>
+          <td><span style="color:red;">2</span></td>
+          <td><span style="color:green;">5</span></td>
+        </tr>
+      </table>
+    </footer>
+  </div>
+
+  <script>
+    // Toggle dropdown visibility
+    function toggleDropdown() {
+      document.getElementById('myDropdown').classList.toggle('show');
     }
-}
 
-document.getElementById("demo").addEventListener("click", myFunction);
+    // open/close menu button
+    document.getElementById('menuBtn').addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleDropdown();
+    });
 
-function myFunction() {
-  document.getElementById("demo").innerHTML = "quenton.whitecalf@edu.sait.ca";
-}
-</script>
-	</body>
+    // close when clicking outside
+    window.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        var dropdowns = document.getElementsByClassName('dropdown-content');
+        for (var i = 0; i < dropdowns.length; i++) {
+          dropdowns[i].classList.remove('show');
+        }
+      }
+    });
+
+    // Contact: replace the button with a permanent mailto: anchor the first time it's clicked
+    var contactBtn = document.getElementById('contactBtn');
+    contactBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      // build a safe mailto link; you can change the address below
+      var email = 'quenton.whitecalf@edu.sait.ca';
+      var mailto = 'mailto:' + email;
+      // replace the button with an anchor element so it stays and is clickable
+      var a = document.createElement('a');
+      a.href = mailto;
+      a.id = 'contactLink';
+      a.role = 'menuitem';
+      a.textContent = email;
+      // find the parent dropdown-content and replace the button
+      this.parentNode.replaceChild(a, this);
+      // ensure dropdown stays open after reveal (optional); remove this line to close
+      document.getElementById('myDropdown').classList.add('show');
+    });
+  </script>
+</body>
 </html>
-<!-- Oh my god I had it then I tried getting fancy and it got worse and worse the more I tried differentiating it for this page --!>
