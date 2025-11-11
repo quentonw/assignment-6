@@ -134,3 +134,54 @@ footer {
 .show-alt {
   display: block;
 }
+
+/* make the dropdown appear top-left of the page */
+.dropdown-alt {
+  position: fixed;   /* fixed so it stays at top-left while scrolling */
+  top: 12px;
+  left: 12px;
+  z-index: 9999;
+  display: inline-block;
+}
+
+/* button styling */
+.dropbtn-alt {
+  background: #00AA66;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* menu panel: absolute relative to the .dropdown-alt container */
+.dropdown-content-alt {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px); /* appears below the button */
+  left: 0;
+  min-width: 160px;
+  background: #010101;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  border-radius: 6px;
+  padding: 6px 0;
+}
+
+/* links inside menu */
+.dropdown-content-alt a {
+  display: block;
+  padding: 8px 14px;
+  color: #33ee41;
+  text-decoration: none;
+}
+
+.dropdown-content-alt a:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* class used to show the menu */
+.dropdown-content-alt.show {
+  display: block;
+}
